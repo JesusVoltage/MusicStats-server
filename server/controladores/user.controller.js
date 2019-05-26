@@ -10,6 +10,11 @@ userCtrl.getUsers = async (req, res) => {
     res.json(users);
 }
 
+userCtrl.getUsersNum =async (req, res)=> {
+    const num = await User.find().count();
+    res.json(num);
+}
+
 userCtrl.createUser = async (req, res) => {
     const user = new User(req.body);
     await user.save();

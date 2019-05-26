@@ -6,6 +6,11 @@ const userCtrl = require('../controladores/user.controller');
 /**  obtener todos los usuarios*/
 router.get('/', userCtrl.getUsers);
 
+
+/** obtener numero de usuarios */
+
+router.get('/:num', userCtrl.getUsersNum)
+
 /** obtener datos de un único usuario */
 router.get('/:id', userCtrl.getUser);
 
